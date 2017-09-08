@@ -23,12 +23,12 @@
   </div>
   <div class="form-group">
     <input type="checkbox" name="available"  [(ngModel)]="passat.available">
-    <label>Favourite</label>
+    <label>Dostępny</label>
   </div>
   <div class="form-group">
-    <button class="btn btn-outline-primary" (click)="cancel()">CANCEL</button>
-    <button class="btn btn-outline-primary" type="submit" [disabled]="carsForm.invalid">SAVE</button>
-    <button class="btn btn-outline-primary" (click)="remove()">REMOVE</button>
+    <button class="btn btn-outline-primary" (click)="cancel()">ANULUJ</button>
+    <button class="btn btn-outline-primary" type="submit" [disabled]="carsForm.invalid">ZAPISZ</button>
+    <button class="btn btn-outline-primary" (click)="remove()">USUŃ</button>
   </div>
 </div>
 </form>

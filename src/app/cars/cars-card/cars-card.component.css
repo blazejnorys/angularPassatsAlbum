@@ -11,9 +11,9 @@ p {
   font-size: medium;
 }
 
-.form-control {
-  text-align: center !important;
-}
+/*.form-control {*/
+  /*text-align: center !important;*/
+/*}*/
 
 label {
   color:#3498db;

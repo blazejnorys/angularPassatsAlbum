@@ -1,7 +1,7 @@
 <div class="app-container">
   <div class="container-fluid" style="background-color: #34495e">
     <div class="row">
-      <div class="offset-5 col-2">
+      <div class="offset-lg-4 offset-md-4 offset-sm-4 offset-xs-2 col-lg-4 col-md-4 col-sm-4 col-xs-2 ">
         <app-cars-form *ngIf="edited" [passat]="edited" (save)="save($event)"
                        (cancel)="cancel()" (remove)="remove($event)"></app-cars-form>
 
@@ -10,9 +10,9 @@
   </div>
 
 
-
-  <button class="btn btn-outline-primary" (click)="newPassat()">new Passat</button>
-
+<div class="newPassat">
+  <button class="btn btn-outline-primary" (click)="newPassat()">Dodaj Passeratiego</button>
+</div>
 
 
 

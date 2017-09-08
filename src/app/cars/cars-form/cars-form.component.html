@@ -1,0 +1,35 @@
+<form #carForm="ngForm" class="card car-form-card" novalidate="true" (ngSubmit)="save(carForm)">
+<div class="passat-form">
+  <div class="form-group">
+    <label>Silnik</label>
+    <input #title="ngModel" type="text" class="form-control" name="engine" [(ngModel)]="passat.engine" required minlength="3">
+    <div class="errors" *ngIf="title.touched || title.dirty || title.submitted">
+      <div *ngIf="title.errors?.required">To pole jest wymagane</div>
+      <div *ngIf="title.errors?.minlength">To pole musi mieć przynajmniej {{title.errors.minlength.requiredLength}} znaków</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Przebieg [km]</label>
+    <input #mileage="ngModel" type="text" class="form-control" name="mileage" [(ngModel)]="passat.mileage" required minlength="4">
+    <div class="errors" *ngIf="mileage.toucher || mileage.dirty || mileage.submitted">
+    <div *ngIf="mileage.errors?.required">To pole jest wymagane</div>
+    <div *ngIf="mileage.errors?.minlength">To pole musi mieć przynajmniej {{mileage.errors.minlength.requiredLength}} znaków</div>
+  </div>
+  </div>
+  <div class="form-group">
+    <label>Rocznik</label>
+    <input type="text" class="form-control" name="year" [(ngModel)]="passat.year">
+  </div>
+  <div class="form-group">
+    <input type="checkbox" name="available"  [(ngModel)]="passat.available">
+    <label>Favourite</label>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-outline-primary" (click)="cancel()">CANCEL</button>
+    <button class="btn btn-outline-primary" type="submit" [disabled]="carsForm.invalid">SAVE</button>
+    <button class="btn btn-outline-primary" (click)="remove()">REMOVE</button>
+  </div>
+</div>
+</form>
+

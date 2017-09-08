@@ -1,0 +1,6 @@
+<div class="container" style="background-color: #34495e" >
+  <div class="row">
+    <app-cars-card style="padding: 20px" class="col-md-4 col-sm-6" *ngFor="let passat of passats" [passat]="passat"
+                   [isSelected]="passat == selected" (selected)="select(passat)"></app-cars-card>
+  </div>
+</div>
